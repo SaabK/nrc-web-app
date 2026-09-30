@@ -1,0 +1,141 @@
+"use client";
+
+import { useState } from "react";
+import { submitForm } from "@/lib/forms/submit";
+
+interface JoinFormProps {
+  type: "executive" | "volunteer";
+  roleId?: string;
+  roleTitle?: string;
+}
+
+export function JoinForm({ type, roleId, roleTitle }: JoinFormProps) {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    studentId: "",
+    batch: "",
+    department: "",
+    role: roleId ?? "",
+    motivation: "",
+    experience: "",
+    portfolio: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    const result = await submitForm(`join-${type}`, { ...form, type });
+    if (result.success) {
+      setStatus("success");
+    } else {
+      setStatus("error");
+      setErrorMsg(result.message);
+    }
+  };
+
+  const inputClass =
+    "w-full bg-[rgba(232,79,14,0.02)] hover:bg-[rgba(232,79,14,0.05)] border border-[rgba(232,79,14,0.2)] text-white placeholder:text-[#6B7285] px-5 py-4 text-base focus:outline-none focus:border-[#E84F0E] focus:ring-1 focus:ring-[#E84F0E] transition-all duration-300 rounded-none";
+
+  const label = (text: string, required = false) => (
+    <span className="flex items-center font-mono text-[11px] tracking-[0.25em] text-[#9AA0B2] uppercase mb-3">
+      {text}{required && <span className="text-[#E84F0E] ml-1.5 text-sm leading-none">*</span>}
+    </span>
+  );
+
+  if (status === "success") {
+    return (
+      <div className="border border-[rgba(232,79,14,0.3)] p-12 text-center">
+        <div className="font-display font-black text-[#E84F0E] text-3xl mb-3">APPLICATION RECEIVED</div>
+        <p className="text-[#9AA0B2] text-sm">
+          We&apos;ve received your application{roleTitle ? ` for ${roleTitle}` : ""}. Our HR team will be in touch.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-8" noValidate>
+      <div className="grid sm:grid-cols-2 gap-8">
+        <div>
+          {label("Full Name", true)}
+          <input id="name" name="name" type="text" required value={form.name}
+            onChange={handleChange} className={inputClass} placeholder="Your full name" autoComplete="name" />
+        </div>
+        <div>
+          {label("Email", true)}
+          <input id="email" name="email" type="email" required value={form.email}
+            onChange={handleChange} className={inputClass} placeholder="your@email.com" autoComplete="email" />
+        </div>
+      </div>
+
+      <div className="grid sm:grid-cols-3 gap-8">
+        <div>
+          {label("Student ID", true)}
+          <input id="studentId" name="studentId" type="text" required value={form.studentId}
+            onChange={handleChange} className={inputClass} placeholder="XXXXXXXXXX" />
+        </div>
+        <div>
+          {label("Batch")}
+          <input id="batch" name="batch" type="text" value={form.batch}
+            onChange={handleChange} className={inputClass} placeholder="e.g. 2024" />
+        </div>
+        <div>
+          {label("Department")}
+          <input id="department" name="department" type="text" value={form.department}
+            onChange={handleChange} className={inputClass} placeholder="e.g. SEECS" />
+        </div>
+      </div>
+
+      {type === "executive" && (
+        <div>
+          {label("Role Applying For", true)}
+          <input id="role" name="role" type="text" required value={form.role}
+            onChange={handleChange} className={inputClass} placeholder="e.g. Technical Lead" />
+        </div>
+      )}
+
+      <div>
+        {label("Motivation", true)}
+        <textarea id="motivation" name="motivation" required rows={4} value={form.motivation}
+          onChange={handleChange} className={`${inputClass} resize-none`}
+          placeholder="Why do you want to join NRC?" />
+      </div>
+
+      <div>
+        {label("Relevant Experience")}
+        <textarea id="experience" name="experience" rows={4} value={form.experience}
+          onChange={handleChange} className={`${inputClass} resize-none`}
+          placeholder="Tell us about any relevant robotics, engineering, or technical experience." />
+      </div>
+
+      {type === "executive" && (
+        <div>
+          {label("Portfolio / GitHub")}
+          <input id="portfolio" name="portfolio" type="url" value={form.portfolio}
+            onChange={handleChange} className={inputClass} placeholder="https://github.com/…" />
+        </div>
+      )}
+
+      {status === "error" && (
+        <p className="text-sm text-[#C1121F]" role="alert">{errorMsg}</p>
+      )}
+
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="self-start inline-flex items-center gap-2 font-display text-xs tracking-[0.2em] text-white bg-[#E84F0E] px-8 py-4 rounded-full hover:bg-[#FF6B2B] hover:shadow-[0_0_20px_rgba(232,79,14,0.4)] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 active:scale-95"
+      >
+        {status === "loading" ? "SUBMITTING…" : "SUBMIT APPLICATION →"}
+      </button>
+    </form>
+  );
+}
