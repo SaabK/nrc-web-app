@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { volunteerAreas } from "@/data/join";
-import { JoinForm } from "@/components/forms/JoinForm";
 
 export const metadata: Metadata = {
   title: "Volunteer Applications",
@@ -21,15 +20,23 @@ export default function VolunteerPage() {
           </ol>
         </nav>
 
-        <div className="mb-16">
-          <h1 className="font-display font-black text-white leading-[0.9] tracking-tight mb-6"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
-            VOLUNTEER
-            <br /><span className="text-[#E84F0E]">MEMBERSHIP</span>
-          </h1>
-          <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[52ch]">
-            The entry point for most NRC members. Start building hardware and software from day one.
-          </p>
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
+          <div>
+            <h1 className="font-display font-black text-white leading-[0.9] tracking-tight mb-6"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
+              VOLUNTEER
+              <br /><span className="text-[#E84F0E]">MEMBERSHIP</span>
+            </h1>
+            <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[52ch]">
+              The entry point for most NRC members. Start building hardware and software from day one.
+            </p>
+          </div>
+          <Link
+            href="/join/volunteer/apply"
+            className="self-start sm:self-auto flex-shrink-0 inline-flex items-center gap-2 font-display text-xs tracking-[0.2em] text-white bg-[#E84F0E] px-6 py-3 rounded-full hover:bg-[#FF6B2B] hover:shadow-[0_0_20px_rgba(232,79,14,0.4)] hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
+          >
+            APPLY NOW →
+          </Link>
         </div>
 
         {/* Teams */}
@@ -45,14 +52,6 @@ export default function VolunteerPage() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Application form */}
-        <div>
-          <div className="font-mono text-[10px] tracking-[0.3em] text-[#6B7285] uppercase mb-8 pb-4 border-b border-[rgba(232,79,14,0.1)]">
-            Application Form
-          </div>
-          <JoinForm type="volunteer" />
         </div>
       </div>
     </div>
