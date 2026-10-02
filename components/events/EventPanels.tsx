@@ -163,28 +163,60 @@ export function EventPanels() {
         </div>
 
         {/* Mobile event list */}
-        <div className="lg:hidden flex flex-col gap-0 border-t border-[rgba(232,79,14,0.12)]">
+        <motion.div
+          className="lg:hidden flex flex-col gap-0 border-t border-[rgba(232,79,14,0.12)]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.12 } }
+          }}
+        >
           {events.map((event, i) => (
-            <Link
+            <motion.div
               key={event.id}
-              href={`/events/${event.slug}`}
-              className="group flex items-center justify-between py-6 border-b border-[rgba(232,79,14,0.12)] hover:bg-[rgba(232,79,14,0.03)] transition-colors duration-200 px-2"
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0, 
+                  transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } 
+                }
+              }}
+              whileTap={{ scale: 0.97, transition: { duration: 0.1 } }}
+              className="relative overflow-hidden border-b border-[rgba(232,79,14,0.12)]"
             >
-              <div className="flex items-center gap-5">
-                <span className="font-display font-black text-[rgba(232,79,14,0.3)] text-xl w-8">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <div className="font-display font-bold text-white text-lg">{event.shortName}</div>
-                  <div className="text-[#6B7285] text-sm">{event.tagline}</div>
+              <motion.div
+                className="absolute top-0 left-0 h-[1px] bg-[#E84F0E]"
+                variants={{
+                  hidden: { width: "0%" },
+                  visible: { 
+                    width: "100%", 
+                    transition: { duration: 0.6, ease: "easeOut", delay: 0.1 } 
+                  }
+                }}
+              />
+              <Link
+                href={`/events/${event.slug}`}
+                className="group flex items-center justify-between py-6 hover:bg-[rgba(232,79,14,0.03)] transition-colors duration-200 px-2"
+              >
+                <div className="flex items-center gap-5">
+                  <span className="font-display font-black text-[rgba(232,79,14,0.3)] text-xl w-8">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <div className="font-display font-bold text-white text-lg">{event.shortName}</div>
+                    <div className="text-[#6B7285] text-sm">{event.tagline}</div>
+                  </div>
                 </div>
-              </div>
-              <span className="text-[#E84F0E] group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">
-                →
-              </span>
-            </Link>
+                <span className="text-[#E84F0E] group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">
+                  →
+                </span>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
