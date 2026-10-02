@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import type { EventEdition } from "@/data/events";
+import type { EventEdition } from "@/types";
 
 interface Props {
   eventSlug: string;
