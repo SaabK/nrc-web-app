@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { events, getEventBySlug } from "@/data/events";
+import { EditionCards } from "@/components/events/EditionCards";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -73,43 +74,7 @@ export default async function EventPage({ params }: Props) {
           <div className="font-mono text-[10px] tracking-[0.3em] text-[#6B7285] uppercase mb-10">
             Editions
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(232,79,14,0.1)]">
-            {sortedEditions.map((edition) => (
-              <Link
-                key={edition.year}
-                href={`/events/${event.slug}/${edition.year}`}
-                className="group bg-[#060810] p-8 hover:bg-[#080c18] transition-colors duration-300 relative overflow-hidden"
-              >
-                <div
-                  className="absolute bottom-0 left-0 right-0 h-px bg-[#E84F0E] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
-                  aria-hidden="true"
-                />
-                <div
-                  className="font-display font-black text-[rgba(232,79,14,0.08)] group-hover:text-[rgba(232,79,14,0.2)] transition-colors duration-300 leading-none mb-4"
-                  style={{ fontSize: "3rem" }}
-                  aria-label={`Year ${edition.year}`}
-                >
-                  {edition.year}
-                </div>
-                <p className="text-[#9AA0B2] text-sm leading-relaxed mb-4 max-w-[34ch]">
-                  {edition.description.length > 120
-                    ? `${edition.description.substring(0, 120)}…`
-                    : edition.description}
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {edition.stats.slice(0, 2).map((stat) => (
-                    <div key={stat.label} className="border border-[rgba(232,79,14,0.12)] px-3 py-1.5">
-                      <span className="font-display font-bold text-white text-sm">{stat.value}</span>
-                      <span className="font-mono text-[9px] tracking-wider text-[#6B7285] ml-1.5">{stat.unit}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 font-display text-xs tracking-[0.15em] text-[#E84F0E]">
-                  VIEW EDITION →
-                </div>
-              </Link>
-            ))}
-          </div>
+          <EditionCards eventSlug={event.slug} editions={sortedEditions} />
         </div>
       </div>
     </div>
