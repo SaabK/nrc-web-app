@@ -4,8 +4,8 @@ export const activeRecruitment: "executive" | "volunteer" | "none" = "executive"
 
 export const executiveRoles: JoinRole[] = [
   {
-    id: "hr-head",
-    title: "HR Head",
+    id: "hr",
+    title: "HR",
     department: "HR",
     description:
       "Manage recruitment cycles, member onboarding, and internal culture across the club.",
@@ -22,8 +22,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "technical-head",
-    title: "Technical Head",
+    id: "technical",
+    title: "Technical",
     department: "Technical",
     description:
       "Lead all competition build teams and ensure engineering quality across every NRC project.",
@@ -40,8 +40,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "em-head",
-    title: "EM Head",
+    id: "event-management",
+    title: "Event Management",
     department: "Event Management (EM)",
     description:
       "Plan and execute NRC's full event calendar, from internal sessions to national competitions.",
@@ -58,8 +58,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "sponsorships-head",
-    title: "Sponsorships Head",
+    id: "sponsorships",
+    title: "Sponsorships",
     department: "Sponsorships",
     description:
       "Secure and manage corporate and institutional sponsors to fund NRC's competitions and events.",
@@ -76,8 +76,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "er-head",
-    title: "ER Head",
+    id: "external-relations",
+    title: "External Relations",
     department: "External Relations (ER)",
     description:
       "Build and maintain partnerships with other university societies, industry organizations, and media.",
@@ -94,8 +94,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "marketing-head",
-    title: "Marketing Head",
+    id: "marketing",
+    title: "Marketing",
     department: "Marketing",
     description:
       "Shape NRC's public identity and run campaigns across digital and physical channels.",
@@ -112,8 +112,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "registrations-head",
-    title: "Registrations Head",
+    id: "registrations",
+    title: "Registrations",
     department: "Registrations",
     description:
       "Manage all participant registration processes for NRC-hosted competitions and workshops.",
@@ -130,8 +130,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "finance-head",
-    title: "Finance Head",
+    id: "finance",
+    title: "Finance",
     department: "Finance",
     description:
       "Oversee NRC's budget, track spending across departments, and ensure financial accountability.",
@@ -148,8 +148,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "logistics-head",
-    title: "Logistics Head",
+    id: "logistics",
+    title: "Logistics",
     department: "Logistics",
     description:
       "Handle procurement, storage, and transport of equipment and materials for all NRC activities.",
@@ -166,8 +166,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "decor-head",
-    title: "Décor Head",
+    id: "decor",
+    title: "Décor",
     department: "Décor",
     description:
       "Design and execute the physical setup and visual environment for NRC events.",
@@ -184,8 +184,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "smm-head",
-    title: "SMM Head",
+    id: "smm",
+    title: "Social Media Marketing",
     department: "Social Media Marketing (SMM)",
     description:
       "Run NRC's social media presence across all platforms with consistent, engaging content.",
@@ -202,8 +202,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "media-head",
-    title: "Media Head",
+    id: "media",
+    title: "Media",
     department: "Media",
     description:
       "Document NRC events through photography and videography for archival and promotional use.",
@@ -220,8 +220,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "graphics-head",
-    title: "Graphics Head",
+    id: "graphics",
+    title: "Graphics",
     department: "Graphics",
     description:
       "Design all visual assets for NRC's events, campaigns, and digital presence.",
@@ -238,8 +238,8 @@ export const executiveRoles: JoinRole[] = [
     ],
   },
   {
-    id: "admin-head",
-    title: "Admin Head",
+    id: "admin",
+    title: "Administration",
     department: "Administration (Admin)",
     description:
       "Keep NRC's operations running smoothly through documentation, scheduling, and inter-department coordination.",
