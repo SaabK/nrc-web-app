@@ -43,7 +43,7 @@ export function JoinForm({ type, roleId, roleTitle }: JoinFormProps) {
   };
 
   const inputClass =
-    "w-full bg-[rgba(232,79,14,0.02)] hover:bg-[rgba(232,79,14,0.05)] border border-[rgba(232,79,14,0.2)] text-white placeholder:text-[#6B7285] px-5 py-4 text-base focus:outline-none focus:border-[#E84F0E] focus:ring-1 focus:ring-[#E84F0E] transition-all duration-300 rounded-none";
+    "w-full min-h-[52px] bg-[rgba(232,79,14,0.02)] hover:bg-[rgba(232,79,14,0.05)] border border-[rgba(232,79,14,0.2)] text-white placeholder:text-[#6B7285] px-4 py-3 md:px-5 md:py-4 text-base focus:outline-none focus:border-[#E84F0E] focus:ring-1 focus:ring-[#E84F0E] transition-all duration-300 rounded-none";
 
   const label = (text: string, required = false) => (
     <span className="flex items-center font-mono text-[11px] tracking-[0.25em] text-[#9AA0B2] uppercase mb-3">
@@ -106,14 +106,14 @@ export function JoinForm({ type, roleId, roleTitle }: JoinFormProps) {
       <div>
         {label("Motivation", true)}
         <textarea id="motivation" name="motivation" required rows={4} value={form.motivation}
-          onChange={handleChange} className={`${inputClass} resize-none`}
+          onChange={handleChange} className={`${inputClass} min-h-[120px] resize-none`}
           placeholder="Why do you want to join NRC?" />
       </div>
 
       <div>
         {label("Relevant Experience")}
         <textarea id="experience" name="experience" rows={4} value={form.experience}
-          onChange={handleChange} className={`${inputClass} resize-none`}
+          onChange={handleChange} className={`${inputClass} min-h-[120px] resize-none`}
           placeholder="Tell us about any relevant robotics, engineering, or technical experience." />
       </div>
 
@@ -132,7 +132,7 @@ export function JoinForm({ type, roleId, roleTitle }: JoinFormProps) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start inline-flex items-center gap-2 font-display text-xs tracking-[0.2em] text-white bg-[#E84F0E] px-8 py-4 rounded-full hover:bg-[#FF6B2B] hover:shadow-[0_0_20px_rgba(232,79,14,0.4)] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 active:scale-95"
+        className="w-full sm:w-auto mb-12 sm:mb-0 self-start inline-flex items-center justify-center gap-2 font-display text-xs tracking-[0.2em] text-white bg-[#E84F0E] px-8 py-4 rounded-full hover:bg-[#FF6B2B] hover:shadow-[0_0_20px_rgba(232,79,14,0.4)] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 active:scale-95"
       >
         {status === "loading" ? "SUBMITTING…" : "SUBMIT APPLICATION →"}
       </button>

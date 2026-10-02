@@ -50,7 +50,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto pt-24 pb-16 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center min-h-[calc(100vh-80px)] pt-4">
+        <div className="grid lg:grid-cols-2 gap-0 items-center min-h-[calc(100vh-80px)] pt-4">
 
           {/* Left — Text */}
           <div className="flex flex-col items-start justify-center pt-4 lg:pt-0 min-w-0 overflow-visible">
@@ -140,7 +140,7 @@ export function Hero() {
 
             {/* Stat strip */}
             <motion.div
-              className="mt-6 pt-6 border-t border-[rgba(255,255,255,0.08)] opacity-80 flex flex-wrap gap-8"
+              className="mt-4 pt-4 md:mt-6 md:pt-6 border-t border-[rgba(255,255,255,0.08)] opacity-80 flex flex-wrap gap-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
@@ -162,9 +162,9 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — Visual */}
+          {/* Right — Visual (hidden on mobile) */}
           <motion.div
-            className="hero-visual relative flex items-center justify-center pr-4 lg:pr-8 transition-transform duration-700 ease-out"
+            className="hero-visual hidden lg:flex relative items-center justify-center pr-4 lg:pr-8 transition-transform duration-700 ease-out"
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
