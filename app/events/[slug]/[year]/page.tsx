@@ -91,7 +91,7 @@ export default async function EditionPage({ params }: Props) {
             <br />
             <span className="text-[#E84F0E]">{year}</span>
           </h1>
-          <p className="text-[#9AA0B2] text-lg leading-relaxed max-w-[52ch]">
+          <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[60ch]">
             {edition.description}
           </p>
         </div>

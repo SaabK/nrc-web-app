@@ -112,7 +112,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.55 }}
             >
-              NUST&apos;s engineering society — building robots that compete at the national level.
+              NUST&apos;s engineering society. We build robots that compete nationally.
             </motion.p>
 
 

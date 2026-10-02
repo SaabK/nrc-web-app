@@ -41,7 +41,7 @@ export default function EventsPage() {
             <span className="text-[#E84F0E]">BUILD FOR.</span>
           </h1>
           <p className="text-[#6B7285] text-sm leading-relaxed max-w-[50ch]">
-            From Asia&apos;s largest robotics stage to internal proving grounds — every
+            From Asia&apos;s largest robotics stage to internal proving grounds. Every
             event is where engineering meets execution.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function EventsPage() {
         {(Object.entries(byCategory) as [string, typeof events][]).map(
           ([cat, catEvents]) =>
             catEvents.length === 0 ? null : (
-              <div key={cat} className="mb-24">
+              <div key={cat} className="mb-16">
                 <div className="flex items-center gap-4 mb-10">
                   <span className="font-mono text-[10px] tracking-[0.3em] text-[#6B7285] uppercase">
                     {categoryLabel[cat]}

@@ -28,8 +28,7 @@ export default function ExecutivePage() {
             <br /><span className="text-[#E84F0E]">POSITIONS</span>
           </h1>
           <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[52ch]">
-            Executive roles run the club. You&apos;ll be accountable for real outcomes — 
-            competition results, event delivery, team health.
+            Executive roles run the club. You own the outcomes.
           </p>
         </div>
 

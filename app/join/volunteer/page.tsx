@@ -28,8 +28,7 @@ export default function VolunteerPage() {
             <br /><span className="text-[#E84F0E]">MEMBERSHIP</span>
           </h1>
           <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[52ch]">
-            Volunteer membership is the entry point for most NRC members. 
-            Start building real hardware and software from day one.
+            The entry point for most NRC members. Start building hardware and software from day one.
           </p>
         </div>
 

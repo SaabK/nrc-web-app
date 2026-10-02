@@ -11,7 +11,7 @@ export function EventPanels() {
   return (
     <section
       id="events"
-      className="relative mt-0 pt-28 lg:pt-36 pb-28 lg:pb-36 bg-[#080c18] overflow-hidden px-6 lg:px-10"
+      className="relative mt-0 pt-28 lg:pt-36 pb-28 lg:pb-36 bg-[#080c18] overflow-hidden px-6 lg:px-10 border-t border-[rgba(232,79,14,0.1)]"
       aria-labelledby="events-heading"
     >
       <div className="max-w-[1400px] mx-auto">

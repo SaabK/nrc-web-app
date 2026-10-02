@@ -46,13 +46,8 @@ export function Contact() {
               <br />
               <span className="text-[#E84F0E]">TOUCH.</span>
             </h2>
-            <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[36ch] mb-4">
-              Whether you&apos;re a prospective member, sponsor, or partner —
-              we&apos;re easy to reach.
-            </p>
-            <p className="text-[#6B7285] text-sm leading-relaxed max-w-[36ch] mb-10">
-              Responses within 24 hours on weekdays. For urgent inquiries,
-              reach the exec team directly at the address below.
+            <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[36ch] mb-10">
+              Prospective member, sponsor, or partner? We respond within 24 hours on weekdays.
             </p>
 
             <Link

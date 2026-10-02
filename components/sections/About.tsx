@@ -7,17 +7,17 @@ const pillars = [
   {
     index: "01",
     title: "Engineering Excellence",
-    body: "Every circuit, mechanism, and line of code is reviewed, refined, and stress-tested before competition. We hold our builds to professional standards — no shortcuts, no excuses.",
+    body: "Every build is reviewed and stress-tested to professional standards before competition.",
   },
   {
     index: "02",
     title: "Competitive Edge",
-    body: "NRC fields teams across national and international arenas. We study our opponents, analyse our failures, and iterate until we win. Competition is where we measure ourselves.",
+    body: "We study our opponents, analyse failures, and iterate. Competition is how we measure ourselves.",
   },
   {
     index: "03",
     title: "Knowledge Transfer",
-    body: "Skills don't leave when members graduate. Through rigorous documentation, internal workshops, and a culture of mentorship, we compound institutional knowledge across every cohort.",
+    body: "Skills don't leave when members graduate. Documentation and mentorship compound knowledge across every cohort.",
   },
 ];
 
@@ -75,9 +75,7 @@ export function About() {
               </h2>
 
               <p className="text-[#9AA0B2] text-base leading-relaxed max-w-[40ch] mb-4">
-                Pakistan&apos;s most technically rigorous university robotics society.
-                Since our founding, we have competed at the national and international
-                level — building hardware that performs under pressure.
+                Pakistan&apos;s most technically rigorous university robotics society, competing nationally and internationally since our founding.
               </p>
 
               {/* Metric strip */}

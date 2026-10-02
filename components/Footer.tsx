@@ -32,7 +32,7 @@ export function Footer() {
               <span className="font-display font-black text-white text-base tracking-wider">NRC</span>
             </Link>
             <p className="text-[#6B7285] text-sm leading-relaxed max-w-[38ch]">
-              NUST Robotics Club — engineering Pakistan&apos;s most competitive
+              NUST Robotics Club. Engineering Pakistan&apos;s most competitive
               university robotics teams since our founding.
             </p>
           </div>

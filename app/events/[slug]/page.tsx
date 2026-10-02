@@ -91,7 +91,7 @@ export default async function EventPage({ params }: Props) {
                 >
                   {edition.year}
                 </div>
-                <p className="text-[#6B7285] text-sm leading-relaxed mb-6 max-w-[34ch]">
+                <p className="text-[#9AA0B2] text-sm leading-relaxed mb-4 max-w-[34ch]">
                   {edition.description.length > 120
                     ? `${edition.description.substring(0, 120)}…`
                     : edition.description}
