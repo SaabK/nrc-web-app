@@ -31,7 +31,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#060810] pb-24 px-6 lg:px-10"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#060810] pb-24 px-6 lg:px-10"
       aria-label="Hero"
     >
       {/* Grid */}
@@ -50,7 +50,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto pt-24 pb-16 w-full">
-        <div className="grid xl:grid-cols-2 gap-0 items-center min-h-[calc(100vh-80px)] pt-4">
+        <div className="grid xl:grid-cols-2 gap-0 items-center pt-4">
 
           {/* Left — Text */}
           <div className="flex flex-col items-start justify-center pt-4 xl:pt-0 min-w-0 overflow-visible">
