@@ -46,10 +46,12 @@ export function Footer() {
         </div>
 
         {/* Link columns */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 mb-14">
+        {/* After social column is added, change lg:grid-cols-[1fr_1fr_1fr] to lg:grid-cols-[1.4fr_1fr_1fr_1fr] */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr] gap-10 mb-14">
 
           {/* Social */}
-          <div>
+          {/* Uncomment only after socials are developed */}
+          {/* <div>
             <div className="font-mono text-[9px] tracking-[0.3em] text-[#E84F0E] uppercase mb-5">
               Follow Us
             </div>
@@ -69,7 +71,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Navigate */}
           <div>

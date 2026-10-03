@@ -30,6 +30,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="flex flex-col gap-y-3"
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="w-6 h-px bg-[#E84F0E]" aria-hidden="true" />
@@ -89,7 +90,8 @@ export function Contact() {
               transition={{ duration: 0.5, delay: 0.35 }}
               className="pt-8"
             >
-              <div className="font-mono text-[10px] tracking-[0.25em] text-[#3D4358] uppercase mb-5">
+              {/* Uncomment only after socials are developed */}
+              {/* <div className="font-mono text-[10px] tracking-[0.25em] text-[#3D4358] uppercase pb-2">
                 Find us online
               </div>
               <div className="flex flex-wrap gap-3">
@@ -104,7 +106,7 @@ export function Contact() {
                     {s.platform.toUpperCase()}
                   </a>
                 ))}
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

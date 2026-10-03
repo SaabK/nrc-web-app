@@ -54,6 +54,7 @@ export function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
+              className="flex flex-col gap-y-3"
             >
               <div className="flex items-center gap-3 mb-6">
                 <span className="w-6 h-px bg-[#E84F0E]" aria-hidden="true" />

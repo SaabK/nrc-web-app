@@ -53,7 +53,7 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-0 items-center min-h-[calc(100vh-80px)] pt-4">
 
           {/* Left — Text */}
-          <div className="flex flex-col items-start justify-center pt-4 lg:pt-0 min-w-0 overflow-visible">
+          <div className="flex flex-col gap-y-3 items-start justify-center pt-4 lg:pt-0 min-w-0 overflow-visible">
             {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}

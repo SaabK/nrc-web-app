@@ -37,7 +37,7 @@ export function Navigation() {
         }`}
       >
         <nav
-          className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between"
+          className="container mx-auto px-6 lg:px-10 h-16 flex items-center justify-between"
           aria-label="Main navigation"
         >
           {/* Logo */}
