@@ -50,10 +50,10 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto pt-24 pb-16 w-full">
-        <div className="grid lg:grid-cols-2 gap-0 items-center min-h-[calc(100vh-80px)] pt-4">
+        <div className="grid xl:grid-cols-2 gap-0 items-center min-h-[calc(100vh-80px)] pt-4">
 
           {/* Left — Text */}
-          <div className="flex flex-col items-start justify-center pt-4 lg:pt-0 min-w-0 overflow-visible">
+          <div className="flex flex-col items-start justify-center pt-4 xl:pt-0 min-w-0 overflow-visible">
             {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -162,9 +162,9 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — Visual (hidden on mobile) */}
+          {/* Right — Visual (hidden below xl) */}
           <motion.div
-            className="hero-visual hidden lg:flex relative items-center justify-center pr-4 lg:pr-8 transition-transform duration-700 ease-out"
+            className="hero-visual hidden xl:flex relative items-center justify-center pr-4 xl:pr-8 transition-transform duration-700 ease-out"
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
