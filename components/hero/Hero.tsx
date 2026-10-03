@@ -16,11 +16,11 @@ export function Hero() {
 
     const handleMouseMove = (e: MouseEvent) => {
       const { left, top, width, height } = hero.getBoundingClientRect();
-      const x = ((e.clientX - left) / width - 0.5) * 20;
-      const y = ((e.clientY - top) / height - 0.5) * 10;
+      const x = ((e.clientX - left) / width - 0.5) * 30;
+      const y = ((e.clientY - top) / height - 0.5) * 15;
       const visual = hero.querySelector<HTMLElement>(".hero-visual");
       if (visual) {
-        visual.style.transform = `translate(${x * 0.4}px, ${y * 0.4}px)`;
+        visual.style.transform = `translate(${x * 0.8}px, ${y * 0.8}px)`;
       }
     };
 
