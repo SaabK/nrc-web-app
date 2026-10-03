@@ -30,8 +30,8 @@ export default async function EventPage({ params }: Props) {
   const sortedEditions = [...event.editions].sort((a, b) => b.year - a.year);
 
   return (
-    <div className="min-h-screen bg-[#060810] pt-28 pb-24 px-6 lg:px-10">
-      <div className="max-w-[1400px] mx-auto">
+    <div className="min-h-screen bg-[#060810] pt-28 pb-24">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
 
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-12">

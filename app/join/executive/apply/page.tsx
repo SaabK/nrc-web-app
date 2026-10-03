@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function ExecutiveApplyPage() {
   return (
-    <div className="min-h-screen bg-[#060810] pt-28 pb-24 px-6 lg:px-10">
-      <div className="max-w-[1400px] mx-auto">
+    <div className="min-h-screen bg-[#060810] pt-28 pb-24">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
 
         <nav aria-label="Breadcrumb" className="mb-12">
           <ol className="flex items-center gap-3" role="list">

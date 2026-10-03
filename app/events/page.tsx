@@ -21,8 +21,8 @@ export default function EventsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#060810] pt-28 pb-24 px-6 lg:px-10">
-      <div className="max-w-[1400px] mx-auto">
+    <div className="min-h-screen bg-[#060810] pt-28 pb-24">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
 
         {/* Header */}
         <div className="mb-20">
