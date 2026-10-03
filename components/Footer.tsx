@@ -12,10 +12,10 @@ const platformAbbr: Record<string, string> = {
 export function Footer() {
   return (
     <footer
-      className="bg-[#060810] border-t border-[rgba(232,79,14,0.1)]"
+      className="bg-[#060810] border-t border-[rgba(232,79,14,0.1)] flex justify-center"
       role="contentinfo"
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-16 pb-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-16 pb-10 w-full">
 
         {/* Top tagline row */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14 pb-12 border-b border-[rgba(255,255,255,0.05)]">

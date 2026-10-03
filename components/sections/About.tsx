@@ -31,7 +31,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative pt-32 lg:pt-40 pb-28 lg:pb-36 bg-[#060810] overflow-hidden"
+      className="relative pt-32 lg:pt-40 pb-28 lg:pb-36 bg-[#060810] overflow-hidden flex justify-center"
       aria-labelledby="about-heading"
     >
       {/* Subtle left-side orange bar */}
@@ -44,7 +44,7 @@ export function About() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 w-full">
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-16 lg:gap-24">
 
           {/* Left */}

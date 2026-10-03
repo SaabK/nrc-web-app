@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function VolunteerApplyPage() {
   return (
-    <div className="min-h-screen bg-[#060810] pt-28 pb-24">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div className="min-h-screen bg-[#060810] pt-28 pb-24 flex justify-center">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 w-full">
 
         <nav aria-label="Breadcrumb" className="mb-12">
           <ol className="flex items-center gap-3" role="list">

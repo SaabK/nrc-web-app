@@ -8,7 +8,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative mt-0 pt-32 lg:pt-40 pb-28 lg:pb-36 bg-[#060810] overflow-hidden border-t border-[rgba(232,79,14,0.15)]"
+      className="relative mt-0 pt-32 lg:pt-40 pb-28 lg:pb-36 bg-[#060810] overflow-hidden border-t border-[rgba(232,79,14,0.15)] flex justify-center"
       aria-labelledby="contact-heading"
     >
       {/* Background glow */}
@@ -21,7 +21,7 @@ export function Contact() {
         }}
       />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 w-full">
         <div className="grid lg:grid-cols-[1fr_1.6fr] gap-16 lg:gap-24">
 
           {/* Left */}

@@ -30,8 +30,8 @@ const paths = [
 
 export default function JoinPage() {
   return (
-    <div className="min-h-screen bg-[#060810] pt-28 pb-24">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div className="min-h-screen bg-[#060810] pt-28 pb-24 flex justify-center">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 w-full">
 
         {/* Header */}
         <div className="mb-20">
