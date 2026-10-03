@@ -62,22 +62,15 @@ export default function JoinPage() {
             const isInactive =
               activeRecruitment === "none" || activeRecruitment !== path.type;
 
-            return (
-              <Link
-                key={path.href}
-                href={path.href}
-                className={[
-                  "group relative p-10 lg:p-14 overflow-hidden transition-colors duration-300",
-                  isActive
-                    ? "bg-[rgba(232,79,14,0.05)] border border-[#E84F0E]"
-                    : "bg-[#060810]",
-                  isInactive ? "opacity-50" : "",
-                  !isInactive ? "hover:bg-[#080c18]" : "",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                {/* Hover glow — only on active card */}
+            const cardClasses = [
+              "group relative p-10 lg:p-14 overflow-hidden transition-colors duration-300",
+              isActive
+                ? "bg-[rgba(232,79,14,0.05)] border border-[#E84F0E] hover:bg-[#080c18]"
+                : "bg-[#060810] opacity-50 cursor-not-allowed select-none",
+            ].join(" ");
+
+            const cardContent = (
+              <>
                 {isActive && (
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -120,7 +113,7 @@ export default function JoinPage() {
                   <span
                     className={[
                       "font-display text-xs tracking-[0.15em] text-[#E84F0E] inline-block",
-                      !isInactive
+                      isActive
                         ? "group-hover:translate-x-1 transition-transform duration-200"
                         : "",
                     ]
@@ -138,7 +131,17 @@ export default function JoinPage() {
                     aria-hidden="true"
                   />
                 )}
+              </>
+            );
+
+            return isActive ? (
+              <Link key={path.href} href={path.href} className={cardClasses}>
+                {cardContent}
               </Link>
+            ) : (
+              <div key={path.href} className={cardClasses} aria-disabled="true">
+                {cardContent}
+              </div>
             );
           })}
         </div>
