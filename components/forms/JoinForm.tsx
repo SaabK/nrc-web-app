@@ -25,6 +25,7 @@ const DEPARTMENTS: string[] = [
   "NBS",
   "SADA",
   "NSHS",
+  "USPCAS-E"
 ];
 
 // Replace these dummy roles with your actual executive roles when ready
