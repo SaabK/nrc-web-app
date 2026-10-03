@@ -50,12 +50,12 @@ export function Contact() {
               Prospective member, sponsor, or partner? We respond within 24 hours on weekdays.
             </p>
 
-            <Link
+            {/* <Link
               href="/join"
               className="inline-flex items-center gap-2 font-display text-xs tracking-[0.2em] text-white bg-[#E84F0E] px-6 py-3 rounded-full hover:bg-[#FF6B2B] hover:shadow-[0_0_20px_rgba(232,79,14,0.4)] hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
             >
               JOIN NRC →
-            </Link>
+            </Link> */}
           </motion.div>
 
           {/* Right — contact rows */}
